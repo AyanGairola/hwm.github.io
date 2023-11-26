@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=IBM+Plex+Serif:wght@300;400;500&family=Manrope:wght@200&family=Pangolin&family=Roboto+Mono&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+}
+:root{  
+ --backgroundColor:#0d1016;
+ --textColor:#ffffff;
+ --convertorBackgroundColor:#1f232c;
+ --black:#000000;
+ --selectorColor:#636060;
+ --hoverColor:#a39e9eb3;
+ 
+}   
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+
+.main{
+    display: flex;
+    width: 100%;
+    gap: 5vw;
+    padding-top: 17vh;
+}
+.mainLeft{
+    padding-left: 3vw;
+    width: 65%;
+    border: 2px solid var(--backgroundColor);
+    border-radius: 15px;
+
+}
+.mainRight{
+    background-color: var(--convertorBackgroundColor);
+    border: 1px solid var(--convertorBackgroundColor);
+    border-radius: 0.6rem;
+    height: 60vh;
+    width: 30%;
+    margin-right: 3vw;
+}
+.convertor{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    color: white;
+    padding-top: 3vh;
+    justify-content: center;
+    
+}
+.convertorHeading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+.convertFrom{
+    display: flex;
+    gap: 4vw;
+    padding-left: 0.6vw;
+    padding-top: 1vh;
+}
+
+.selector,.selector2{
+    width: 40%;
+    height: 9vh;
+    z-index: 2;
+}
+#selectField,#selectField2{
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom:5px;
+    box-sizing: border-box;
+    background: var(--selectorColor);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#list,#list2{
+    width: 100%;
+    background: var(--selectorColor);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.options,.options2{
+    width: 100%;
+    padding: 15px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+.options img{
+    position: absolute;
+    top: 12px;
+    left: 18px;
+}
+.options2 img{
+    position: absolute;
+    top: 12px;
+    left: 18px;
+}
+.options:hover{
+    background: var(--hoverColor);
+}
+.options2:hover{
+    background: var(--hoverColor);
+}
+.hide{
+    visibility: hidden;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+#arrowIcon{
+    transition: transform 0.5s;
+}
+#arrowIcon2{
+    transition: transform 0.5s;
+}
+.xdd{
+    padding-left: 3px;
+    padding-bottom: 2px;
+}
+
+.amount{
+    position: relative;
+    display: flex;
+    gap: 4.3vw;
+    padding-left: 0.7vw;
+}
+.amount input{
+    height: 3vh;
+    width: 35%;
+    padding: 5px;
+    background-color: #636060;
+    border: 2px solid #636060;
+    color: #ffffff;
+}
+input::placeholder{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input:focus{
+    outline: none;
+}
+
+.tnc{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    
+}
+.tnc a{
+    color: rgb(126, 124, 124);
+    text-decoration: underline;
+}
+.tnc a:visited{
+    color: white;
+    text-decoration: underline;
+}
+.tnc a:hover{
+    color: rgb(136, 134, 134);
+}
+
+.c-btn{
+    display: flex;
+    justify-content: center;
+}   
+.convert-btn{
+    background-color: orangered;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border: 0.15rem solid orangered;
+    border-radius: 43px;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'IBM Plex Serif', serif;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 1vh;
+    width: 90%;
+    height: 5vh;
+    
+}
+.convert-btn:hover{
+    color: rgb(0, 0, 0);
+
+}
+.convert-btn:hover{
+    background-color: rgba(255, 68, 0, 0.671);
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.logo{
+    display: flex;
+    padding-left: 1vw;
+    padding-top: 1.5vh;
+    background-blend-mode:multiply;
+}
+
+.navbar{
+    display: flex; 
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(196, 196, 196, 0.589);
+    height: 10vh;
+    font-family: 'IBM Plex Serif', serif;
+    z-index: 100;
+    width: 100vw;
+}
+
+.items ul{
+    display: flex;
+    list-style: none;
+    gap: 5vw;
+    padding-top: 4vh;
+    font-size: large;   
+    font-weight: 450;
+    padding-left: 40vw;
+
+}
+
+.items a:visited{
+    color: var(--textColor);
+    text-decoration: none;
+}
+.items a:hover{
+    color: rgb(58, 238, 82);
+    text-decoration: none;
+}
+.items a{
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+
+
+.link:hover{
+    color: rgb(58, 238, 82);
+}
+
+
+
+
+.join-btn{
+    background-color: orangered;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border: 0.15rem solid orangered;
+    border-radius: 43px;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'IBM Plex Serif', serif;
+    cursor: pointer;
+    color: #ffffff;
+}
+.join-btn a:hover{
+    color: rgb(0, 0, 0);
+
+}
+.join-btn:hover{
+    background-color: rgba(255, 68, 0, 0.671);
+}
+
+
+/*Joyal Did From Here*/
+
+.main{
+    margin-bottom: 16vh;
+}
+
+.about-us{
+    background-color: #1c2951;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid grey;
+    font-size: 3.5vh;
+    padding: 4%;
+}
+
+.charges{
+    font-size: 4vh;
+    padding: 4% 4% 4% 35%;
+}
+
+.fee{
+    display: flex;
+    padding: 3% 2% 4% 18%;
+}
+
+.fee-per-cent{
+    font-size: 10vh;
+}
+
+.disclaimer{
+    font-size: 2.5vh;
+}
+
+.bio{
+    padding: 5%;
+    font-size: 3vh;
+    color: darkgrey;
+}
+
+.our-team{
+    display: flex;
+    justify-content: center;
+    font-size: 4vh;
+    padding-bottom: 3%;
+}
+
+.members{
+    display: flex;
+    justify-content: space-around;
+    font-size: 3vh;
+}
+
+.contact-us{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    padding: 4%;
+    font-size: 2.5vh;
+    color: darkgrey;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    padding: 0.25%;
+}
+
+.walletDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    padding-top: 1vh; 
+}
+.walletDetails input{
+    width: 90%;
+    height: 3vh;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.walletDetails input::placeholder{
+    color: #000000;
+    font-weight: 400;
+}
+
+.underline{
+    border-bottom: 2px solid #fff; 
+    padding-bottom: 2px; 
+    margin-bottom: -2px; 
+}
+
+.logotext{
+    padding-top: 0.7vh;
+}

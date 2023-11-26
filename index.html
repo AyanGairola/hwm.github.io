@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Exchange</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="header">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html" class="imglink"><img src=".//logos/KryptoSwaprLogo.png" alt="Crypto Exchange" height="65px" width="auto"></a>
+            
+            <div class="logotext">
+                <a href="index.html" class="imglink"><img src=".//logos/KryptoSwaprName.png" alt="Crypto Exchange" height="60px" width="300px"></a>
+            </div>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="mainLeft">
+        <div id="curve_chart" style="width: 900px; height: 498px"></div>
+    </div>
+    <div class="mainRight">
+        <div class="convertor">
+            <div class="convertorHeading">
+                <h2>CONVERT CRYPTOCURRENCY</h2>
+            </div>
+            <div class="underline">
+
+            </div>
+            <div class="convertFrom">
+                <div class="selector">
+                    <p class="xdd">Convert From</p>
+                    <div id="selectField">
+                        <p id="selectText">Bitcoin</p>
+                        <img src="./logos/pointer-up-svgrepo-com.svg" alt="" height="12px" id="arrowIcon"
+                             class="rotate">
+                    </div>
+
+                    <ul id="list" class="hide">
+                        <li class="options">
+                            <img src="./logos/bitcoin-logo-svgrepo-com.svg" alt="" height="25px">
+                            <p>Bitcoin</p>
+                        </li>
+                        <li class="options">
+                            <img src="./logos/bitcoin-logo-svgrepo-com.svg" alt="" height="25px">
+                            <p>DogeCoin</p>
+                        </li>
+                        <li class="options">
+                            <img src="./logos/bitcoin-logo-svgrepo-com.svg" alt="" height="25px">
+                            <p>Ethereum</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="selector2">
+                    <p class="xdd">Convert To</p>
+                    <div id="selectField2">
+                        <p id="selectText2">Ethereum</p>
+                        <img src="./logos/pointer-up-svgrepo-com.svg" alt="" height="12px" id="arrowIcon2"
+                             class="rotate">
+                    </div>
+
+                    <ul id="list2" class="hide">
+                        <li class="options2">
+                            <img src="./logos/bitcoin-logo-svgrepo-com.svg" alt="" height="25px">
+                            <p>Bitcoin</p>
+                        </li>
+                        <li class="options2">
+                            <img src="./logos/bitcoin-logo-svgrepo-com.svg" alt="" height="25px">
+                            <p>DogeCoin</p>
+                        </li>
+                        <li class="options2">
+                            <img src="./logos/bitcoin-logo-svgrepo-com.svg" alt="" height="25px">
+                            <p>Ethereum</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="amount">
+                <input type="text" placeholder="Enter amount">
+                <input type="text" placeholder="Estimated payout">
+            </div>
+
+            <div class="walletDetails">
+                <h2>Enter your wallet details</h2>
+                <input type="text" id="wDetails" placeholder="Enter your wallet details">
+            </div>
+
+            <div class="tnc">
+                <p><a href="termsAndCondition.html">Terms and Condition</a></p>
+            </div>
+
+
+
+
+            <div class="c-btn">
+                <button class="convert-btn">CONVERT</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--Joyal Did From Here-->
+
+<div class="about-us" id="about-us">
+    <div class="intro">
+        <div class="logo"></div>
+        <div class="one-line">Seamlessly swap your Digital Assets with ease on our Secure Wallet-integrated Crypto
+            Exchange
+        </div>
+    </div>
+
+    <div class="charges">
+        <div class="charged-at">Charged At</div>
+        <div class="fee">
+            <div class="fee-per-cent">0.02%</div>
+            <div class="star">*</div>
+        </div>
+        <div class="disclaimer">*Guaranteed Lowest Price, Anywhere, Anytime.</div>
+    </div>
+
+    <div class="bio">
+        Welcome to our cutting-edge crypto exchange platform, where simplicity meets security and transparency. Our
+        user-friendly interface ensures seamless swaps from one cryptocurrency to another, while our commitment to
+        open-source technology guarantees transparency and trust. We prioritize your security above all else, employing
+        the highest standards to safeguard your assets. Experience the lowest exchange rates coupled with the highest
+        quality of security, making us your ultimate destination for hassle-free and secure crypto transactions.
+    </div>
+
+    <div class="team">
+        <div class="our-team">Our Team</div>
+        <div class="members">
+            <div class="name">Ayan Gairola</div>
+            <div class="name">Aditya Kumar</div>
+            <div class="name">Abhinav Rana</div>
+            <div class="name">Joyal Jijo</div>
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <div>Have any Questions ? <br>Contact Us at- cryptoxchange@gmail.com</div>
+    </div>
+
+    <div class="footer">Made with ❤️ by MISFITS</div>
+</div>
+
+<script src="index.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages': ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Bitcoin', 'DogeCoin', 'Etherium'],
+            ['2004', 1000, 400, 1200],
+            ['2005', 1170, 460, 600],
+            ['2006', 660, 1120, 900],
+            ['2007', 1030, 540, 1100]
+        ]);
+
+        var options = {
+            title: 'Crypto Performance',
+            curveType: 'function',
+            legend: {position: 'bottom'},
+            backgroundColor: '#1f232c',
+            titleTextStyle: {
+                color: 'white'
+            },
+            hAxis: {
+                title: 'Year',
+                textStyle: {
+                    color: 'white'  // Change the font color of the x-axis
+                }
+            },
+            vAxis: {
+                title: 'Values',
+                textStyle: {
+                    color: 'white'  // Change the font color of the y-axis
+                }
+            },
+            series: {
+                0: {  // First series (Bitcoin)
+                    color: 'green',  // Change the line color
+                    visibleInLegend: true,
+                    labelInLegend: 'Bitcoin',  // Legend label
+                    label: 'Bitcoin',  // Data label
+                    textStyle: {
+                        color: 'white'  // Change the font color of the data labels for Sales
+                    }
+                },
+                1: {  // Second series (DogeCoin)
+                    color: 'orange',  // Change the line color
+                    visibleInLegend: true,
+                    labelInLegend: 'DogeCoin',  // Legend label
+                    label: 'DogeCoin',  // Data label
+                    textStyle: {
+                        color: 'white'  // Change the font color of the data labels for Expenses
+                    }
+                },
+                2: {  // Second series (Etherium)
+                    color: 'red',  // Change the line color
+                    visibleInLegend: true,
+                    labelInLegend: 'Etherium',  // Legend label
+                    label: 'Etherium',  // Data label
+                    textStyle: {
+                        color: 'white'  // Change the font color of the data labels for Expenses
+                    }
+                }
+            }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+    }
+</script>
+</body>
+
+</html>
